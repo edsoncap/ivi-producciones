@@ -74,22 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // 4. INTERACTIVIDAD DEL FORMULARIO DE CONTACTO
     const formulario = document.querySelector('.contact-form-container form');
     if (formulario) {
-        formulario.addEventListener('submit', (e) => {
-            e.preventDefault();
+        formulario.addEventListener('submit', () => {
             const botonSubmit = formulario.querySelector('.btn-submit-form');
-            const textoOriginal = botonSubmit.textContent;
-            
-            botonSubmit.textContent = "Procesando Solicitud VIP...";
-            botonSubmit.style.background = '#25D366';
-            botonSubmit.style.color = '#000000';
-            
-            setTimeout(() => {
-                alert("¡Solicitud enviada con éxito! Un asesor de IVI Producciones se comunicará contigo muy pronto.");
-                formulario.reset();
-                botonSubmit.textContent = textoOriginal;
-                botonSubmit.style.background = '#050505';
-                botonSubmit.style.color = '#D4AF37';
-            }, 1500);
+
+            botonSubmit.textContent = "Enviando Solicitud...";
+            botonSubmit.disabled = true;
         });
     }
 });
