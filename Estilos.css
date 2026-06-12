@@ -1,0 +1,742 @@
+/* ==========================================================================
+   1. RESET, BASE Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    background-color: #050505; 
+    color: #ffffff; 
+    font-family: 'Montserrat', sans-serif; 
+    overflow-x: hidden; 
+}
+
+.gold-text { color: #D4AF37; }
+
+/* ==========================================================================
+   2. MENÚ DE NAVEGACIÓN (NAVBAR PREMIUM)
+   ========================================================================== */
+.navbar { 
+    background: rgba(5, 5, 5, 0.85); 
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    transition: 0.4s ease; 
+    padding: 12px 0;
+}
+
+.nav-title { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.8rem; 
+    color: #ffffff; 
+    margin: 0; 
+    letter-spacing: 2px; 
+}
+
+.nav-title span { 
+    color: #D4AF37; 
+}
+
+.nav-link { 
+    color: #cccccc !important; 
+    text-transform: uppercase; 
+    font-size: 0.85rem; 
+    letter-spacing: 1.5px; 
+    margin: 0 15px; 
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #D4AF37 !important;
+}
+
+.btn-cotizar { 
+    border: 1px solid #D4AF37; 
+    color: #D4AF37 !important; 
+    border-radius: 25px; 
+    padding: 6px 22px !important; 
+    font-weight: 600;
+}
+
+.btn-cotizar:hover {
+    background-color: #D4AF37;
+    color: #050505 !important;
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO (ESTILO ELEGANTE Y EFECTO ESCRITURA)
+   ========================================================================== */
+.hero-section { 
+    min-height: 85vh; 
+    display: flex; 
+    align-items: center; 
+    background: radial-gradient(circle at center, #1c1c1c 0%, #050505 100%); 
+    padding-top: 100px; 
+    padding-bottom: 60px;
+}
+
+.hero-logo { 
+    width: 100%; 
+    max-width: 160px; 
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.25)); 
+}
+
+.brand-name { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 5.2rem; 
+    letter-spacing: 10px; 
+    line-height: 0.95; 
+    margin-bottom: 15px; 
+}
+
+.brand-name span { 
+    color: #D4AF37; 
+    margin-left: 12px; 
+    font-weight: 400; 
+}
+
+.tagline { 
+    color: #bbbbbb; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 4px; 
+    margin: 0;
+    line-height: 1.8;
+}
+
+.typewriter-text {
+    color: #D4AF37;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+    padding-bottom: 2px;
+}
+
+.cursor {
+    background-color: #D4AF37;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.btn-main { 
+    background: linear-gradient(to right, #FFD700, #B8860B); 
+    color: #000000; 
+    text-decoration: none; 
+    padding: 16px 36px; 
+    border-radius: 50px; 
+    font-weight: 700; 
+    display: inline-block; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-main:hover { 
+    background: #ffffff; 
+    color: #000000;
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ==========================================================================
+   4. SECCIÓN SERVICIOS (GLASSMORPHISM PREMIUM)
+   ========================================================================== */
+.services-section { 
+    background: linear-gradient(to bottom, #050505, #0c0c0c);
+    border-top: 1px solid rgba(212, 175, 55, 0.05);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+}
+
+.section-title { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 3.5rem; 
+    letter-spacing: 4px; 
+}
+
+.section-title span { 
+    color: #D4AF37; 
+}
+
+.service-card {
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 45px 25px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.service-card:hover { 
+    transform: translateY(-10px); 
+    border-color: rgba(212, 175, 55, 0.8); 
+    background: rgba(30, 30, 30, 0.7);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+.featured { 
+    border-color: rgba(212, 175, 55, 0.3); 
+    background: rgba(35, 30, 15, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gold-icon { 
+    font-size: 3.2rem; 
+    color: #D4AF37; 
+    margin-bottom: 22px; 
+    display: block; 
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+}
+
+.service-card h4 { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.8rem;
+    letter-spacing: 2px; 
+    margin-bottom: 15px; 
+}
+
+.service-card p { 
+    font-size: 0.9rem; 
+    color: #aaaaaa; 
+    line-height: 1.6; 
+}
+
+.price-tag {
+    display: block;
+    margin-top: 20px;
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    padding-top: 12px;
+}
+
+/* ==========================================================================
+   5. SECCIÓN DE GALERÍA VISUAL VIP (FOTOS + VIDEO INTEGRADO)
+   ========================================================================== */
+.gallery-section {
+    background-color: #050505;
+}
+
+.gallery-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.gallery-img-container {
+    height: 480px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    opacity: 0.85;
+    transition: all 0.4s ease;
+}
+
+.gallery-overlay h5 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #D4AF37;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.gallery-overlay p {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin: 0;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(184, 134, 11, 0.25) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+#carouselGalleryMobile .gallery-img-container {
+    height: 420px; 
+}
+
+/* --- OPTIMIZACIÓN DEL VIDEO: TAMAÑO REDUCIDO Y CONTROLADO --- */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+}
+
+.premium-video {
+    width: 100%;
+    height: 620px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   5.2 INFORMACIÓN DE RESERVAS
+   ========================================================================== */
+.booking-info {
+    background-color: #050505;
+}
+
+.booking-box {
+    border: 1px dashed rgba(212, 175, 55, 0.4); 
+    border-radius: 20px;
+    background: rgba(15, 15, 15, 0.4);
+    padding: 40px !important;
+}
+
+.info-text {
+    font-size: 0.95rem;
+    color: #dddddd;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   5.5 SECCIÓN DE CONTACTO PREMIUM (GLASSMORPHISM FORM)
+   ========================================================================== */
+.contact-section {
+    background: linear-gradient(to bottom, #0c0c0c, #050505);
+    border-top: 1px solid rgba(212, 175, 55, 0.05);
+}
+
+.contact-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.contact-desc {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+.contact-info-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.contact-icon-box {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D4AF37;
+    font-size: 1.1rem;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777777;
+    font-weight: 600;
+}
+
+.detail-text {
+    font-size: 0.95rem;
+    color: #dddddd;
+}
+
+.btn-whatsapp-direct {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #25D366;
+    color: #25D366;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-direct:hover {
+    background-color: #25D366;
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.contact-form-container {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.form-label-custom {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #bbbbbb;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control-custom {
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-control-custom::placeholder {
+    color: #555555;
+}
+
+.form-control-custom:focus {
+    border-color: #D4AF37;
+    background-color: #050505;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.form-select-custom {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23D4AF37' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 14px;
+}
+
+.btn-submit-form {
+    background: #050505;
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-submit-form:hover {
+    background: linear-gradient(to right, #FFD700, #B8860B);
+    color: #000000;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+/* ==========================================================================
+   6. COMPONENTE: FOOTER PREMIUM CON LOGO
+   ========================================================================== */
+.main-footer {
+    background-color: #000000;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.footer-brand-container {
+    gap: 5px;
+}
+
+.footer-logo {
+    border-radius: 4px;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
+}
+
+.footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.footer-brand span {
+    color: #D4AF37;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #555555;
+    margin: 0;
+    padding-left: 2px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #111111;
+    border: 1px solid #222222;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #000000;
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.footer-contacts p {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.footer-contacts p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (AJUSTES PARA CELULARES)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .brand-name { font-size: 3.8rem; text-align: center; }
+    .tagline { text-align: center; font-size: 1rem; letter-spacing: 2px; }
+    .hero-section { text-align: center; }
+    .text-container { text-align: center !important; margin-top: 15px; }
+    .action-container { margin-top: 25px; }
+}
+
+@media (max-width: 576px) {
+    .brand-name { font-size: 2.8rem; letter-spacing: 5px; }
+    .section-title { font-size: 2.5rem; }
+    .booking-box { padding: 25px 15px !important; }
+}
+
+/* ==========================================================================
+   8.5 EFECTOS DE ANIMACIÓN CON JAVASCRIPT (REVEAL ANIMATIONS)
+   ========================================================================== */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   9.0 BOTÓN FLOTANTE DE WHATSAPP CON EFECTO PULSO
+   ========================================================================== */
+.whatsapp-floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-floating-btn:hover {
+    background-color: #20ba5a;
+    color: #ffffff;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+@keyframes whatsapp-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-floating-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+}
+
+/* ==========================================================================
+   AGREGADO: TÍTULO DE REDES SOCIALES PREMIUM (¡CERRADO CORRECTAMENTE!)
+   ========================================================================== */
+.footer-social-title {
+    font-size: 0.75rem; 
+    text-transform: uppercase;
+    letter-spacing: 2.5px; 
+    color: #D4AF37; 
+    margin-bottom: 18px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   AGREGADO: TARJETAS DE TESTIMONIOS GLASSMORPHISM VIP REFORZADAS
+   ========================================================================== */
+.testimonial-card {
+    background: rgba(25, 25, 25, 0.5) !important;
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 35px 25px !important;
+    border-radius: 15px !important;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(212, 175, 55, 0.6) !important;
+    background: rgba(40, 35, 20, 0.6) !important;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Resaltamos la tarjeta del medio de forma elegante con destello dorado */
+.featured-testimonial {
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    background: rgba(35, 30, 15, 0.4) !important;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1) !important;
+}
+
+.stars-container i {
+    color: #D4AF37 !important; /* Cambiado a Oro Premium IVI */
+    font-size: 1rem !important;
+    margin-right: 4px !important;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.6)) !important;
+}
+
+.testimonial-text {
+    font-size: 0.9rem !important;
+    color: #dddddd !important;
+    line-height: 1.7 !important;
+    font-style: italic !important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.testimonial-author strong {
+    display: block !important;
+    font-size: 1rem !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
+.testimonial-author span {
+    display: block !important;
+    font-size: 0.75rem !important;
+    color: #D4AF37 !important; /* Detalle del evento en dorado premium */
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-top: 5px !important;
+}
+
+/* ==========================================================================
+   EFECTO DORADO PREMIUM EN LA GALERÍA (HOVER)
+   ========================================================================== */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+}
+
+/* Cuando el mouse pasa sobre el contenedor de la imagen */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37 !important; 
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25) !important; 
+}
+
+/* Si usas un filtro o una capa encima de la imagen */
+.gallery-item img {
+    transition: all 0.4s ease;
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.1) contrast(1.05); 
+    scale: 1.03; 
+}
+
+.section-title {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
